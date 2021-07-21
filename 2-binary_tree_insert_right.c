@@ -1,6 +1,6 @@
 #include "binary_trees.h"
 /**
-* binary_tree_insert_left -  inserts a node as the left-child
+* binary_tree_insert_right -  inserts a node as the left-child
 * @parent: parent node
 * @value: value of node
 * Return: node
@@ -12,7 +12,7 @@ binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 
 	if (parent == NULL)
 		return (NULL);
-	new_right = malloc(sizeof(binary_tree_t));
+	new_right = calloc(1, sizeof(binary_tree_t));
 	if (new_right == NULL)
 		return (NULL);
 	new_right->n = value;
