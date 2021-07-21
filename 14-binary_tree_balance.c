@@ -1,6 +1,6 @@
 #include "binary_trees.h"
 /**
-* binary_tree_balance_int - measures the height
+* binary_tree_height_int - measures the height
 * @tree: pointer to the root
 * Return: height
 */
@@ -10,7 +10,9 @@ int binary_tree_height_int(const binary_tree_t *tree)
 	int levelsR;
 
 	if (tree == NULL)
+	{
 		return (0);
+	}
 	else
 	{
 		levelsL = binary_tree_height_int(tree->left);
